@@ -1,0 +1,27 @@
+{
+  "name": "prembly-pass",
+  "version": "0.1.2",
+  "description": "Whether you're building a new application from scratch or adding identity verification to an existing project, Prembly-Verify provides a reliable and secure way to verify your users' identities.",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "parcel": "parcel build ./src/index.ts --target=node --out-dir=dist",
+    "dts": "dts-bundle-generator ./sdk/src/index.d.ts -o dist/index.d.ts",
+    "tsc-bundle": "tsc --emitDeclarationOnly --declaration --outFile ./dist/bundle.d.ts ./sdk/src/index.ts"
+  },
+  "author": "Olowoniyi Daniel",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.2.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.9.5"
+  }
+}
