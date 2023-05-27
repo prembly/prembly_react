@@ -5,7 +5,7 @@ import PremblyGlobalBusinessVerification from "./GlobalBusinessVerification";
 
 export {
   PremblyDataVerification,
+  PremblyDocumentVerification,
   PremblyGeneralVerification,
   PremblyGlobalBusinessVerification,
-  PremblyDocumentVerification,
 };

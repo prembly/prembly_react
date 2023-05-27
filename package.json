@@ -1,27 +1,55 @@
 {
   "name": "prembly-pass",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "Whether you're building a new application from scratch or adding identity verification to an existing project, Prembly-Verify provides a reliable and secure way to verify your users' identities.",
+  "keywords": [
+    "identity verification",
+    "identity",
+    "prembly",
+    "verification"
+  ],
+  "author": "Olowoniyi Daniel <olowoniyidaniel@gmail.com>",
+  "homepage": "https://github.com/Danztee/prembly-pass#readme",
+  "license": "MIT",
+  "source": "src/index.ts",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE",
     "README.md",
     "package.json"
   ],
-  "scripts": {
-    "parcel": "parcel build ./src/index.ts --target=node --out-dir=dist",
-    "dts": "dts-bundle-generator ./sdk/src/index.d.ts -o dist/index.d.ts",
-    "tsc-bundle": "tsc --emitDeclarationOnly --declaration --outFile ./dist/bundle.d.ts ./sdk/src/index.ts"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Danztee/prembly-pass.git"
   },
-  "author": "Olowoniyi Daniel",
-  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "parcel": "parcel build",
+    "format": "prettier --write ."
+  },
   "dependencies": {
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.2.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "typescript": "^4.9.5"
+    "@parcel/packager-ts": "^2.9.0",
+    "@parcel/transformer-typescript-types": "^2.9.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "parcel": "^2.9.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
   }
 }

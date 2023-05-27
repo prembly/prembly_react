@@ -1,8 +1,8 @@
 import {
   PremblyDataVerification,
-  PremblyDocumentVerification,
   PremblyGeneralVerification,
   PremblyGlobalBusinessVerification,
+  PremblyDocumentVerification,
 } from "./models";
 
 export {
